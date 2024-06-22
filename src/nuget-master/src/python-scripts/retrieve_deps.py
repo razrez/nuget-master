@@ -36,7 +36,7 @@ def get_packages_from(repository: str):
     return package_references
     
 
-auth = Auth.Token("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") # using an access token
+auth = Auth.Token("<pubic access token>") # using an access token
 g = Github(auth=auth)
 
 while True:
