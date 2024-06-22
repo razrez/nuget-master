@@ -1,5 +1,7 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import sys
 import csv
 import requests
 import json
@@ -64,6 +66,7 @@ import joblib
 # pip install scikit-learn==1.2.2 !!!!!
 from gensim.models import FastText
 from sklearn.neighbors import NearestNeighbors
+
 """Препроцессинг"""
 
 # Функция для очистки текста
@@ -150,7 +153,6 @@ def remove_emojis(text):
     return emoji_pattern.sub(r'', text)
 
 
-# Подготовка к частеречной разметке текста путём установки библиотеки Spacy, загрузки perceptron_tagger и модуля Spacy en
 # %pip install spacy
 # nltk.download('averaged_perceptron_tagger')
 #!python -m spacy download en_core_web_sm
@@ -177,6 +179,7 @@ def lemmatize_and_postag(input_text):
 
     return lemmatize_output_str
 
+
 def preprocesse(input_text):
     clear_text = clean_text(input_text)
 
@@ -184,14 +187,6 @@ def preprocesse(input_text):
 
     return tagged_output
 
-
-"""
-
-> model - embeeding model (FastText)
-
-> knn - KNN kd-tree model of documents' vectors
-
-"""
 
 # Preprocess the text data
 def preprocess_query(query_text):
@@ -214,22 +209,24 @@ def get_repository_vector(description, model):
 def retrieve_relevant_repositories(query, knn, model, data):
     query_vector = get_query_vector(query, model)
     distances, indices = knn.kneighbors([query_vector])
-    return data.Repository.iloc[indices[0]]
+    return data.Repository.iloc[indices[0]].values.tolist()
+
 
 """FastText + kNN(kd-tree)"""
-"""Загрузка моделей и использование"""
-data = pd.read_csv(r'src\dataset\preprocessed_txtdata.csv')
+"""Загрузка моделей и их использование"""
+data = pd.read_csv(r'C:\Users\sharp\Desktop\nuget-master\src\nuget-master\src\python-scripts\dataset\preprocessed_txtdata.csv')
 data['Description'] = data['Description'].apply(lambda x: [word.split('_')[0] for word in x.split()])
 
-fasttext_model = FastText.load(r"src\model\trained_models\fasttext_model")
-knn = joblib.load(r'src\model\trained_models\knn_model.joblib')
+fasttext_model = FastText.load(r"C:\Users\sharp\Desktop\nuget-master\src\nuget-master\src\python-scripts\model\trained_models\fasttext_model")
+knn = joblib.load(r'C:\Users\sharp\Desktop\nuget-master\src\nuget-master\src\python-scripts\model\trained_models\knn_model.joblib')
 
+while True:
+    try:
+        line = sys.stdin.readline().strip()
+        ##line = sys.argv[1]
+        if line:
+            query = line
+            relevant_repositories = retrieve_relevant_repositories(query, knn, fasttext_model, data)
+            print(",".join(relevant_repositories))
 
-def main():
-    # Retrieve relevant repositories for the query "realtime chat app"
-    query = input("query: ")
-    relevant_repositories = retrieve_relevant_repositories(query, knn, fasttext_model, data)
-    return relevant_repositories
-
-if __name__ == "__main__":
-    print(main())
+    except Exception as e: print("error")
