@@ -1,0 +1,81 @@
+{
+  "name": "nuget-master",
+  "displayName": "nuget-master",
+  "description": "Recommends NuGet dependencies from a textual description of a project",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "viewsWelcome": [
+      {
+        "view": "nugetMaster",
+        "contents": "Try to find necessary NuGet packages [learn more](https://libraries.io/nuget)"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "nugetMaster",
+          "name": "NuGet Master"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "nuget-master.recommend",
+        "title": "new query"
+      },
+      {
+        "command": "nuget-master.installDeps",
+        "title": "Install selected dependencies"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "nuget-master.recommend",
+          "when": "view == nugetMaster",
+          "group": "navigation"
+        },
+        {
+          "command": "nuget-master.installDeps",
+          "when": "view == nugetMaster"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [
+    "nuget",
+    "recommend",
+    "vscode-extension",
+    "collections"
+  ],
+  "dependencies": {
+    "python-shell": "^5.0.0"
+  }
+}

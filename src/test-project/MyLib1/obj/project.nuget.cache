@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "TAABLwjmbVTuLMS811ZlgR6Ga48fxfuyxKjUXlKUUZGrkHpw82tBwPqLeknVj+K6a+67BJO2/oV2wF/FYZab4Q==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\sharp\\Desktop\\nuget-master\\src\\test-project\\MyLib1\\MyLib1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.6\\microsoft.aspnetcore.connections.abstractions.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\8.0.6\\microsoft.aspnetcore.http.connections.client.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\8.0.6\\microsoft.aspnetcore.http.connections.common.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\8.0.6\\microsoft.aspnetcore.signalr.client.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\8.0.6\\microsoft.aspnetcore.signalr.client.core.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\8.0.6\\microsoft.aspnetcore.signalr.common.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\8.0.6\\microsoft.aspnetcore.signalr.protocols.json.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.extensions.features\\8.0.6\\microsoft.extensions.features.8.0.6.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.1\\microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\sharp\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
