@@ -4,12 +4,7 @@
 3) Set "auth" variable **personal access tokens (classic)**. Or you can remove it, but it may lead to GitHub rate limits after a while
 4) Now, change working directory for ./src/nuget-master and run the project
 
-![image](https://github.com/razrez/nuget-master/assets/70781439/b673282c-0481-48c2-960e-1ce532dd3f43)
-
-![image](https://github.com/razrez/nuget-master/assets/70781439/5ec40de6-7474-471b-ac01-0823264d23fc)
-
-![image](https://github.com/razrez/nuget-master/assets/70781439/4082942e-03f6-425e-aa6e-051f5b462022)
-
+https://github.com/razrez/nuget-master/assets/70781439/7c8ff54b-992e-4fce-8874-c382fde70ffd
 
 # Плагин Visual Studio Code для рекомендации NuGet зависимостей на основе машинного обучения
 #### В данной работе рассматривается разработка плагина, предназначенного для поиска рекомендаций NuGet зависимостей по текстовому описанию, которое вводится пользователем 
